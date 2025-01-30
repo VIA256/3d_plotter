@@ -5,15 +5,15 @@
 #include <math.h>
 
 #ifndef __WIN32
-	#define __USE_XOPEN /* required for useconds_t */
-	#include <unistd.h>
-	int usleep(useconds_t usec);
-	#define CROSS_SLEEP(ms) usleep(ms * 1000)
-	#define CLEAR_CONSOLE() system("clear")
+    #define __USE_XOPEN /* required for useconds_t */
+    #include <unistd.h>
+    int usleep(useconds_t usec);
+    #define CROSS_SLEEP(ms) usleep(ms * 1000)
+    #define CLEAR_CONSOLE() system("clear")
 #else
-	#include <windows.h>
-	#define CROSS_SLEEP(ms) Sleep(ms)
-	#define CLEAR_CONSOLE() system("cls")
+    #include <windows.h>
+    #define CROSS_SLEEP(ms) Sleep(ms)
+    #define CLEAR_CONSOLE() system("cls")
 #endif
 
 int main(void){
@@ -61,7 +61,7 @@ int main(void){
         putchar('\n');
     }
 //    while(getchar() != '\n');
-		CROSS_SLEEP(40);
+        CROSS_SLEEP(40);
     CLEAR_CONSOLE();
     theta.z += 3.1415926535f / 24.0f;
     theta.y += 3.1415926535f / 23.0f;
