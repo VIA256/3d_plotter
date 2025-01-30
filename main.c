@@ -18,7 +18,7 @@
 
 int main(void){
 	const size_t s_points = 8;
-	const float cl = 3.0f;
+	const float cl = 5.0f;
 	vec3 points[8] = {
 		(vec3){cl, cl, cl},//CUBE
 		(vec3){cl, -cl, cl},
@@ -64,8 +64,8 @@ int main(void){
 	CROSS_SLEEP(40);
 	CLEAR_CONSOLE();
 	theta.z += 3.1415926535f / 24.0f;
-	theta.y += 3.1415926535f / 23.0f;
-	theta.x += 3.1415926535f / 25.0f;
+	theta.y += 3.1415926535f / 24.0f;
+	theta.x += 3.1415926535f / 24.0f;
 	if(theta.z >= 3.1415926535f * 2.0f) theta.z = 0.0f;
 	if(theta.y >= 3.1415926535f * 2.0f) theta.y = 0.0f;
 	if(theta.x >= 3.1415926535f * 2.0f) theta.x = 0.0f;
